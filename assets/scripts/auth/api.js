@@ -4,14 +4,14 @@ const store = require('../store.js')
 
 const signUp = (formData) => {
   return $.ajax({
-    url: config.apiUrl + 'sign-up',
+    url: config.apiUrl + '/sign-up',
     method: 'POST',
     data: formData
   })
 }
 const signIn = (formData) => {
   return $.ajax({
-    url: config.apiUrl + 'sign-in',
+    url: config.apiUrl + '/sign-in',
     method: 'POST',
     data: formData
   })
@@ -20,7 +20,7 @@ const signIn = (formData) => {
 const changePassword = formData => {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + 'change-password',
+    url: config.apiUrl + '/change-password',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },

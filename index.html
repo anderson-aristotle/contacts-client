@@ -1,17 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+
+  <h1>Contacts</h1>
+
+  <!-- Sign-Up-Credentials -->
+
+  <div class="sign-up-container">
+    <form id="sign-up-form">
+      <input name="credentials[email]" class="form-control" type="email" placeholder="email">
+      <input name="credentials[password]" class="form-control" type="password" placeholder="password">
+      <input name="credentials[password_confirmation]" class="form-control" type="password" placeholder="password confirmation">
+      <input type="submit" class="btn btn-lg btn-primary btn-block" value="Sign-Up">
+    </form>
+
+    <!--Alert-containers-->
+    <!--Sign-up-alert-success-message-->
+    <div id="sign-up-messages">
+      <div class="alert alert-success alert-dismissible fade" role="alert" id="sign-up-auth-alert-success">
+        <strong>Success!</strong> You have signed up.
+      </div>
+
+
+    <!--Sign-up-alert-error-message-->
+
+      <div class="alert alert-danger alert-dismissible fade" role="alert" id="sign-up-auth-alert-failure">
+        <strong>Error - </strong> Username exists, or passwords do not match. Try again.
+      </div>
+    </div>
+
+    <!-- sign-in-form -->
+    <!-- <form action="">
+        <div class="sign-up-form">
+          <input type="email" id="input-email" class="form-control" placeholder="Email Address" required autofocus>
+          <label for="input-email">Email Address</label>
+        </div>
+        <div class="form-label-group">
+          <input type="password" id="input-password" class="form-control" placeholder="Password" required>
+          <label for="input-password">Password</label>
+        </div>
+        <input type="submit" class="btn btn-lg btn-primary btn-block" value="Sign-Up">
+      </form> -->
+  </div>
+</body>
+
 </html>
