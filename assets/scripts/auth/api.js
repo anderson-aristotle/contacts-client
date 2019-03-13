@@ -9,6 +9,7 @@ const signUp = (formData) => {
     data: formData
   })
 }
+
 const signIn = (formData) => {
   return $.ajax({
     url: config.apiUrl + '/sign-in',
@@ -21,9 +22,7 @@ const changePassword = formData => {
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/change-password',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
+    headers: { Authorization: 'Token token=' + store.user.token },
     data: formData
   })
 }
@@ -32,9 +31,7 @@ const signOut = function () {
   return $.ajax({
     url: config.apiUrl + '/sign-out',
     method: 'DELETE',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    }
+    headers: { Authorization: 'Token token=' + store.user.token }
   })
 }
 
