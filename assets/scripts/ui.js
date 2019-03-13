@@ -1,9 +1,9 @@
 'use strict'
-// const store = require('../store.js')
 
 const onSignUpSuccess = () => {
   $('#sign-up-auth-alert-success').addClass('show')
-  // $('#sign-up-container').hide()
+  setTimeout(() => {
+      $('#sign-up-auth-alert-success').removeClass('show')
 }
 
 const onSignUpFailure = () => {
