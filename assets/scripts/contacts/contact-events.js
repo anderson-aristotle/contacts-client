@@ -13,7 +13,7 @@ const onCreateContact = (event) => {
 const onUpdateContact = (event) => {
   event.preventDefault()
   const contact = getFormFields(event.target)
-  api.update(contact)
+  api.updateContact(contact)
     .then(ui.onUpdateSuccess)
     .catch(ui.failure)
 }
@@ -35,7 +35,7 @@ const onDeleteContact = (event) => {
 
 const addHandlers = () => {
   $('#get-contacts').on('click', onGetContacts)
-  $('.update-contact').on('click', onUpdateContact)
+  $('#contacts-update').on('submit', onUpdateContact)
   $('#contacts-create').on('submit', onCreateContact)
   $('.content').on('click', '.delete-contact', onDeleteContact)
 }

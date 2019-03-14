@@ -7,6 +7,11 @@ const createContactSuccess = (data) => {
   $('#create-contact-message').text('Contact created!')
 }
 
+const onUpdateSuccess = (data) => {
+  console.log(data)
+  $('form').trigger('reset')
+  $('#create-contact-message').text('Contact created!')
+}
 const getContactsSuccess = (data) => {
   console.log(data)
   const showContactsHtml = showContactsTemplate({ contacts: data.contacts })
@@ -20,5 +25,6 @@ const failure = (error) => {
 module.exports = {
   createContactSuccess,
   getContactsSuccess,
+  onUpdateSuccess,
   failure
 }

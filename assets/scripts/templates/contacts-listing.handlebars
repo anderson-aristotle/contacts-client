@@ -1,12 +1,12 @@
 {{#each contacts as |contact|}}
 <div id="handlebars-{{contacts.id}}" data-id="{{contact.id}}">
    <ul>
+     <li>ID: {{contact.id}}</li>
      <li>Name: {{contact.name}}</li>
      <li>Email: {{contact.email}}</li>
      <li>Industry: {{contact.industry}}</li>
    </ul>
    <button type="button" name="button" class="delete-contact">Delete</button>
 
-   <button type="button" name="button" class="update-contact">Update</button>
 </div>
 {{/each}}

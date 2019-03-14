@@ -24,10 +24,11 @@ const getContacts = function () {
   })
 }
 
-const updateContact = function () {
+const updateContact = function (formData) {
   return $.ajax({
-    url: config.apiUrl + '/contacts/' + store.contact.id,
-    method: 'Patch',
+    url: config.apiUrl + '/contacts/' + formData.contact.id,
+    method: 'PATCH',
+    data: formData,
     headers: {
       Authorization: 'Token token=' + store.user.token
     }

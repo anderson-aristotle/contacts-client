@@ -113,6 +113,19 @@
       </form>
       <div id="create-contact-message" class="user-feedback"></div>
 </div>
+<div>
+  <h2>Update One Contact</h2>
+        <form class="contacts" id="contacts-update">
+          <div class="form-group">
+            <input required type="number" name="contact[id]" id="contact-id-update" placeholder="Contact ID Here">
+            <input required type="text" name="contact[name]" placeholder="Contact Name Here">
+            <input required type="text" name="contact[email]" placeholder="Contact Email Here">
+            <input required type="text" name="contact[industry]" placeholder="Contact Industry Here">
+          </div>
+          <button type="submit">Update Contact</button>
+        </form>
+        <div id="update-contact-message" class="user-feedback"></div>
+</div>
 
 </body>
 
