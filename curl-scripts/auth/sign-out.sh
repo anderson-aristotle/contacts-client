@@ -1,4 +1,4 @@
-curl "curl http://localhost:4741/contacts/sign-out" \
+curl "http://localhost:4741/sign-out" \
   --include \
   --request DELETE \
   --header "Authorization: Token token=${TOKEN}"

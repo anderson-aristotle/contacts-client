@@ -1,4 +1,5 @@
 'use strict'
+const store = require('./store.js')
 
 const onSignUpSuccess = () => {
   $('#sign-up-auth-alert-success').addClass('show')
@@ -12,7 +13,8 @@ const onSignUpFailure = () => {
   setTimeout(() => { $('#sign-up-auth-alert-failure').removeClass('show') }, 3000)
 }
 
-const onSignInSuccess = () => {
+const onSignInSuccess = (data) => {
+  store.user = data.user
   $('#sign-in-auth-alert-success').addClass('show')
   setTimeout(() => { $('#sign-in-auth-alert-success').removeClass('show') }, 3000)
   setTimeout(() => { $('#sign-in-form').hide() }, 2000)
