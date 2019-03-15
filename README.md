@@ -44,6 +44,7 @@ Plan:
 
 #### Initial wireframes and user stories
 https://imgur.com/73S13Re
+https://imgur.com/download/kOsSOdW/
 
 1. As a user, I want to sign up.
 2. As a user, I want to sign in.
