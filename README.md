@@ -62,6 +62,12 @@ https://imgur.com/download/kOsSOdW/
 3. Ask team members for guidance or to reveiw my code.
 4. Test, test, and more test!
 
+## Links
+1. https://github.com/anderson-aristotle/contacts_api	
+2. https://sheltered-plateau-98685.herokuapp.com/	
+3. https://github.com/anderson-aristotle/contacts_client
+4. https://anderson-aristotle.github.io/contacts-client/
+
 ## Unsolved Problems (Problem Working on at the time of editing this file)
 
 1. CSS and layout need improvements.
