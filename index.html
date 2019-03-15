@@ -15,10 +15,11 @@
 
 <body>
 
-  <h1>Contacts</h1>
+  <h1>E-Contacts</h1>
+
 
   <!-- Sign-Up-Credentials -->
-  <div class="sign-up-container">
+  <div class="sign-up-container pre-login">
     <form id="sign-up-form">
       <input name="credentials[email]" class="form-control" type="email" placeholder="email">
       <input name="credentials[password]" class="form-control" type="password" placeholder="password">
@@ -28,7 +29,7 @@
   </div>
 
   <!-- Sign-In-Credentials -->
-  <div id="sign-in-container">
+  <div class="sign-in-container pre-login">
     <form id="sign-in-form">
       <input name="credentials[email]" class="form-control" type="email" placeholder="email">
       <input name="credentials[password]" class="form-control" type="password" placeholder="password">
@@ -36,32 +37,34 @@
     </form>
   </div>
 
+
   <!-- Change-Password-Credentials -->
-  <div class="change-password-container">
+  <div class="change-password-container post-login">
     <form id="change-password-form">
-      <input name="credentials[password]" class="form-control" type="password" placeholder="password">
-      <input name="credentials[password confirmation]" class="form-control" type="password" placeholder="password">
+      <input type="password" name="passwords[old]" placeholder="Old Password">
+      <input type="password" name="passwords[new]" placeholder="New Password">
       <input type="submit" class="btn btn-lg btn-primary btn-block" value="Change-Password">
     </form>
   </div>
 
   <!--Sign-Out-Credentials -->
-  <form class="sign-out-container" id="sign-out-button">
-    <input  type="submit" class="btn btn-lg btn-primary btn-block" value="Sign-Out">
-  </form>
+  <div class="post-login">
+    <form class="sign-out-container" id="sign-out-button">
+      <input type="submit" class="btn btn-lg btn-primary btn-block" value="Sign-Out">
+    </form>
   </div>
 
-        <!--Alert-Messages-Containers-->
+  <!--Alert-Messages-Containers-->
   <!--Sign-Up-Alert-Success-Message-->
   <div id="sign-up-alert-container">
     <button class="alert alert-success alert-dismissible fade" role="alert" id="sign-up-auth-alert-success">
       <strong>Success!</strong> You signed up.
     </button>
 
-  <!--Sign-Up-Alert-Error-Message-->
-      <div class="alert alert-danger alert-dismissible fade" role="alert" id="sign-up-auth-alert-failure">
-        <strong>Try Again</strong> Password may not match or Email exists.
-      </div>
+    <!--Sign-Up-Alert-Error-Message-->
+    <div class="alert alert-danger alert-dismissible fade" role="alert" id="sign-up-auth-alert-failure">
+      <strong>Try Again</strong> Password may not match or Email exists.
+    </div>
   </div>
 
   <!--Sign-In-Alert-Success-Message-->
@@ -85,24 +88,28 @@
     </div>
 
     <!--Change-password-alert-error-message-->
-  <div class="alert alert-change-password-failure alert-dismissible fade" role="alert" id="change-password-auth-alert-failure">
-    <strong>Error</strong> Passwords don't match!
-  </div>
+    <div class="alert alert-change-password-failure alert-dismissible fade" role="alert" id="change-password-auth-alert-failure">
+      <strong>Error</strong> Passwords don't match!
+    </div>
   </div>
 
-<!--Sign-out-alert-success-message-->
-<div id="sign-out-alert-container">
-  <div id="sign-out-button" class="alert alert-success alert-dismissible fade" role="alert" id="sign-out-auth-alert-success">
-    <strong>Success!</strong> You signed out.
+  <!--Sign-out-alert-success-message-->
+  <div id="sign-out-alert-container">
+    <div id="sign-out-button" class="alert alert-success alert-dismissible fade" role="alert" id="sign-out-auth-alert-success">
+      <strong>Success!</strong> You signed out.
+    </div>
   </div>
-</div>
 
-        <!-- Get Contacts Button -->
-<button id="get-contacts">Get Contacts</button>
-<div class="content"></div>
-<div>
+  <div class="post-login">
+    <!-- Get Contacts Button -->
+    <h2>Get Contacts Button</h2>
+    <div id="crud-container">
+      <button id="get-contacts">Get Contacts</button>
+      <div class="content"></div>
 
-  <h2>Create One Contact</h2>
+      <!-- Create-Contact-Form-->
+
+      <h2>Create One Contact</h2>
       <form class="contacts" id="contacts-create">
         <div class="form-group">
           <input required type="text" name="contact[name]" placeholder="Contact name Here">
@@ -111,21 +118,25 @@
         </div>
         <button type="submit">Create Contact</button>
       </form>
+
       <div id="create-contact-message" class="user-feedback"></div>
-</div>
-<div>
-  <h2>Update One Contact</h2>
-        <form class="contacts" id="contacts-update">
-          <div class="form-group">
-            <input required type="number" name="contact[id]" id="contact-id-update" placeholder="Contact ID Here">
-            <input required type="text" name="contact[name]" placeholder="Contact Name Here">
-            <input required type="text" name="contact[email]" placeholder="Contact Email Here">
-            <input required type="text" name="contact[industry]" placeholder="Contact Industry Here">
-          </div>
-          <button type="submit">Update Contact</button>
-        </form>
-        <div id="update-contact-message" class="user-feedback"></div>
-</div>
+
+
+      <!-- Update-Contact-Form-->
+
+      <h2>Update One Contact</h2>
+      <form class="contacts" id="contacts-update">
+        <div class="form-group">
+          <input required type="number" name="contact[id]" id="contact-id-update" placeholder="Contact ID Here">
+          <input required type="text" name="contact[name]" placeholder="Contact Name Here">
+          <input required type="text" name="contact[email]" placeholder="Contact Email Here">
+          <input required type="text" name="contact[industry]" placeholder="Contact Industry Here">
+        </div>
+        <button type="submit">Update Contact</button>
+      </form>
+      <div id="update-contact-message" class="user-feedback"></div>
+    </div>
+  </div>
 
 </body>
 

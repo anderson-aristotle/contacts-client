@@ -20,17 +20,20 @@ const onSignIn = (event) => {
 }
 
 const onChangePassword = (event) => {
+  console.log('onChangePassword')
   event.preventDefault()
   const formData = getFormFields(event.target)
-  api.signIn(formData)
+  console.log(formData)
+  api.changePassword(formData)
     .then(ui.onChangePasswordSuccess)
     .catch(ui.onChangePasswordFailure)
 }
 
 const onSignOut = () => {
+  console.log('onSignOut')
   event.preventDefault()
   api.signOut()
-    .then(ui.signOutSuccess)
+    .then(ui.onSignOutSuccess)
     .catch(ui.signOutFailure)
 }
 
