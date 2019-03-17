@@ -1,7 +1,6 @@
 'use strict'
-const authEvents = require('./events.js')
+const authEvents = require('./auth/events.js')
 const contactEvents = require('./contacts/contact-events.js')
-// const gameEvents = require('./game/game-events.js')
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
@@ -10,15 +9,7 @@ const contactEvents = require('./contacts/contact-events.js')
 // require('./example')
 
 $(() => {
-  // auth events
-  $('#sign-up-form').on('submit', authEvents.onSignUp)
-  $('#sign-in-form').on('submit', authEvents.onSignIn)
-  $('#change-password-form').on('submit', authEvents.onChangePassword)
-  $('#sign-out-button').on('click', authEvents.onSignOut)
-
-  // contact events
-  contactEvents.addHandlers()
-
-  // hide everything that should be shown post login
   $('.post-login').hide()
+  authEvents.addHandlers()
+  contactEvents.contactHandlers()
 })
