@@ -15,9 +15,6 @@
 
 <body>
 
-  <h1>E-Contacts</h1>
-
-
   <!-- Sign-Up-Credentials -->
   <div class="sign-up-container pre-login">
     <form id="sign-up-form">
@@ -28,6 +25,7 @@
     </form>
   </div>
 
+
   <!-- Sign-In-Credentials -->
   <div class="sign-in-container pre-login">
     <form id="sign-in-form">
@@ -37,21 +35,30 @@
     </form>
   </div>
 
-
   <!-- Change-Password-Credentials -->
-  <div class="change-password-container post-login">
-    <form id="change-password-form">
-      <input type="password" name="passwords[old]" placeholder="Old Password">
-      <input type="password" name="passwords[new]" placeholder="New Password">
-      <input type="submit" class="btn btn-lg btn-primary btn-block" value="Change-Password">
-    </form>
-  </div>
-
-  <!--Sign-Out-Credentials -->
   <div class="post-login">
-    <button class="sign-out-container" id="sign-out-button">
-      <input type="submit" class="btn btn-lg btn-primary btn-block" value="Sign-Out">
-    </button>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Authentication
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item">
+          <!--Sign-Out-Credentials -->
+          <form id="change-password-form">
+            <input type="password" name="passwords[old]" placeholder="Old Password">
+            <input type="password" name="passwords[new]" placeholder="New Password">
+            <input type="submit" class="btn btn-lg btn-primary btn-block" value="Change-Password">
+          </form>
+        </a>
+        <a class="dropdown-item">
+          <button class="sign-out-container" id="sign-out-button">
+            <input type="submit" class="btn btn-lg btn-primary btn-block" value="Sign-Out">
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="change-password-container post-login">
+    </div>
   </div>
 
   <!--Alert-Messages-Containers-->
@@ -109,31 +116,33 @@
 
       <!-- Create-Contact-Form-->
 
-      <h2>Create One Contact</h2>
-      <form class="contacts" id="contacts-create">
-        <div class="form-group">
-          <input required type="text" name="contact[name]" placeholder="Contact name Here">
-          <input required type="text" name="contact[email]" placeholder="Contact Email Here">
-          <input required type="text" name="contact[industry]" placeholder="Contact Industry Here">
-        </div>
-        <button type="submit">Create Contact</button>
-      </form>
 
-      <div id="create-contact-message" class="user-feedback"></div>
+      <div class="crud-contacts">
+        <form class="contacts" id="contacts-create">
+          <div class="form-group">
+            <input required type="text" name="contact[name]" placeholder="Contact name Here">
+            <input required type="text" name="contact[email]" placeholder="Contact Email Here">
+            <input required type="text" name="contact[industry]" placeholder="Contact Industry Here">
+          </div>
+          <button type="submit">Create Contact</button>
+        </form>
+
+        <div id="create-contact-message" class="user-feedback"></div>
 
 
-      <!-- Update-Contact-Form-->
+        <!-- Update-Contact-Form-->
 
-      <h2>Update One Contact</h2>
-      <form class="contacts" id="contacts-update">
-        <div class="form-group">
-          <input required type="number" name="contact[id]" id="contact-id-update" placeholder="Contact ID Here">
-          <input required type="text" name="contact[name]" placeholder="Contact Name Here">
-          <input required type="text" name="contact[email]" placeholder="Contact Email Here">
-          <input required type="text" name="contact[industry]" placeholder="Contact Industry Here">
-        </div>
-        <button type="submit">Update Contact</button>
-      </form>
+        <h2>Update One Contact</h2>
+        <form class="contacts" id="contacts-update">
+          <div class="form-group">
+            <input required type="number" name="contact[id]" id="contact-id-update" placeholder="Contact ID Here">
+            <input required type="text" name="contact[name]" placeholder="Contact Name Here">
+            <input required type="text" name="contact[email]" placeholder="Contact Email Here">
+            <input required type="text" name="contact[industry]" placeholder="Contact Industry Here">
+          </div>
+          <button type="submit">Update Contact</button>
+        </form>
+      </div>
       <div id="update-contact-message" class="user-feedback"></div>
     </div>
   </div>

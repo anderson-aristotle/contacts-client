@@ -2,12 +2,12 @@
 const store = require('../store.js')
 
 const onSignUpSuccess = () => {
-  $('#message').text('Signed up successfully')
-  $('#message').addClass('success')
+  $('#sign-up-auth-alert-success').addClass('show')
   setTimeout(() => {
-    $('#message').removeClass()
-  }, 4000)
+    $('#sign-up-auth-alert-success').removeClass('show')
+  }, 3000)
   $('form').trigger('reset')
+  $('#sign-up-container').hide()
 }
 
 const onSignUpFailure = () => {
@@ -22,6 +22,7 @@ const onSignInSuccess = (data) => {
   store.user = data.user
   $('#sign-in-auth-alert-success').addClass('show')
   setTimeout(() => { $('#sign-in-auth-alert-success').removeClass('show') }, 3000)
+  $('crud-contacts').show()
 }
 
 const onSignInFailure = () => {
