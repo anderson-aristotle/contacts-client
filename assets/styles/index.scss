@@ -1,5 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
 
+* {
+  align-content: flex;
+}
+
 .pre-login {
   align-items: center;
   display: block;
@@ -20,4 +24,10 @@
   padding-top: 25px;
   top: 200px;
   width: 40%;
+}
+
+.contact-handlebar-item {
+  border: 1px solid black;
+  margin: 0.5rem;
+  padding: 1rem;
 }

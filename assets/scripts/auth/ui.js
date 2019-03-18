@@ -13,6 +13,7 @@ const onSignUpSuccess = () => {
 const onSignUpFailure = () => {
   $('#sign-in-auth-alert-failure').addClass('show')
   setTimeout(() => { $('#sign-in-auth-alert-failure').removeClass('show') }, 3000)
+  $('form').trigger('reset')
 }
 
 const onSignInSuccess = (data) => {

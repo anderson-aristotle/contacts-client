@@ -32,8 +32,7 @@ const onDeleteContact = (event) => {
     .then(() => onGetContacts(event))
     .catch(ui.failure)
 }
-
-const addHandlers = () => {
+const contactHandlers = () => {
   $('#get-contacts').on('click', onGetContacts)
   $('#contacts-update').on('submit', onUpdateContact)
   $('#contacts-create').on('submit', onCreateContact)
@@ -41,7 +40,7 @@ const addHandlers = () => {
 }
 
 module.exports = {
-  addHandlers,
+  contactHandlers,
   onCreateContact,
   onUpdateContact,
   onDeleteContact

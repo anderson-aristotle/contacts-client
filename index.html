@@ -63,16 +63,19 @@
 
   <!--Alert-Messages-Containers-->
   <!--Sign-Up-Alert-Success-Message-->
-  <div id="sign-up-alert-container">
-    <button class="alert alert-success alert-dismissible fade" role="alert" id="sign-up-auth-alert-success">
+  <div id="sign-up-alert-container" class="alert alert-success alert-dismissible fade" role="alert" id="sign-up-auth-alert-success">
       <strong>Success!</strong> You signed up.
-    </button>
+  </div>
 
     <!--Sign-Up-Alert-Error-Message-->
-    <div class="alert alert-danger alert-dismissible fade" role="alert" id="sign-up-auth-alert-failure">
+
+<div class="alert alert-danger fade" role="alert" id="sign-up-auth-alert-failure">
+  Try Again - Password may not match email.
+</div>
+    <!-- <div class="alert alert-danger alert-dismissible fade" role="alert" id="sign-up-auth-alert-failure">
       <strong>Try Again</strong> Password may not match or Email exists.
     </div>
-  </div>
+  </div> -->
 
   <!--Sign-In-Alert-Success-Message-->
   <div id="sign-in-alert-container">
@@ -102,20 +105,20 @@
 
   <!--Sign-out-alert-success-message-->
   <div id="sign-out-alert-container">
-    <div id="sign-out-button" class="alert alert-success alert-dismissible fade" role="alert" id="sign-out-auth-alert-success">
+    <div id="sign-out" class="alert alert-success alert-dismissible fade" role="alert" id="sign-out-auth-alert-success">
       <strong>Success!</strong> You signed out.
     </div>
   </div>
 
   <div class="post-login">
     <!-- Get Contacts Button -->
-    <h2>Get Contacts Button</h2>
     <div id="crud-container">
+      <h2>Get Contacts Button</h2>
       <button id="get-contacts">Get Contacts</button>
-      <div class="content"></div>
+      <div class="content">
+      </div>
 
       <!-- Create-Contact-Form-->
-
 
       <div class="crud-contacts">
         <form class="contacts" id="contacts-create">
@@ -129,9 +132,7 @@
 
         <div id="create-contact-message" class="user-feedback"></div>
 
-
         <!-- Update-Contact-Form-->
-
         <h2>Update One Contact</h2>
         <form class="contacts" id="contacts-update">
           <div class="form-group">
@@ -143,10 +144,23 @@
           <button type="submit">Update Contact</button>
         </form>
       </div>
-      <div id="update-contact-message" class="user-feedback"></div>
+      <div id="update-contact-message user-feedback" class=""></div>
     </div>
   </div>
+  <!-- Contacts Messages -->
+  <!-- Create Contact Msg-->
+  <div id="create-contact-container" class="alert alert-success alert-dismissible fade" role="alert" id="sign-up-auth-alert-success">
+      <strong>Success!</strong> You created a new contacts.
+  </div>
 
+  <!-- Update Contacts Msg-->
+  <div id="update-contact-container" class="alert alert-success alert-dismissible fade" role="alert" id="sign-up-auth-alert-success">
+      <strong>Success!</strong> You updated a new contacts.
+  </div>
+
+  <!-- Delete Contact Msg-->
+  <div id="delete-contacts-container" class="alert alert-success alert-dismissible fade" role="alert" id="sign-up-auth-alert-success">
+      <strong>Success!</strong> You deleted a new contacts.
+  </div>
 </body>
-
 </html>
