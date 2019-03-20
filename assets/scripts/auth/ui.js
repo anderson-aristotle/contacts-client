@@ -7,12 +7,12 @@ const onSignUpSuccess = () => {
     $('#sign-up-auth-alert-success').removeClass('show')
   }, 3000)
   $('form').trigger('reset')
-  $('#sign-up-container').hide()
+  $('#sign-up-container').addClass('hide')
 }
 
 const onSignUpFailure = () => {
-  $('#sign-in-auth-alert-failure').addClass('show')
-  setTimeout(() => { $('#sign-in-auth-alert-failure').removeClass('show') }, 3000)
+  $('#sign-up-auth-alert-failure').addClass('show')
+  setTimeout(() => { $('#sign-up-auth-alert-failure').removeClass('show') }, 3000)
   $('form').trigger('reset')
 }
 
@@ -22,7 +22,9 @@ const onSignInSuccess = (data) => {
   $('form').trigger('reset')
   store.user = data.user
   $('#sign-in-auth-alert-success').addClass('show')
-  setTimeout(() => { $('#sign-in-auth-alert-success').removeClass('show') }, 3000)
+  setTimeout(() => {
+    $('#sign-in-auth-alert-success').removeClass('show')
+  }, 3000)
   $('crud-contacts').show()
 }
 

@@ -63,50 +63,79 @@
 
   <!--Alert-Messages-Containers-->
   <!--Sign-Up-Alert-Success-Message-->
-  <div id="sign-up-alert-container" class="alert alert-success alert-dismissible fade" role="alert" id="sign-up-auth-alert-success">
+  <div id="sign-up-alert-container">
+    <div class="alert alert-success fade" role="alert" id="sign-up-auth-alert-success">
       <strong>Success!</strong> You signed up.
+    </div>
   </div>
 
-    <!--Sign-Up-Alert-Error-Message-->
-
-<div class="alert alert-danger fade" role="alert" id="sign-up-auth-alert-failure">
-  Try Again - Password may not match email.
-</div>
-    <!-- <div class="alert alert-danger alert-dismissible fade" role="alert" id="sign-up-auth-alert-failure">
-      <strong>Try Again</strong> Password may not match or Email exists.
+  <!--Sign-Up-Alert-Error-Message-->
+  <div id="sign-up-error-container">
+    <div class="alert alert-danger fade" role="alert" id="sign-up-auth-alert-failure">
+      <strong>Error</strong> make sure passwords match!
     </div>
-  </div> -->
+  </div>
 
-  <!--Sign-In-Alert-Success-Message-->
+
+  <!-- Sign-In-Alert-Success-Message-->
   <div id="sign-in-alert-container">
-    <div class="alert alert-sign-in-success alert-dismissible fade" role="alert" id="sign-in-auth-alert-success">
+    <div class="alert alert-success fade" role="alert" id="sign-in-auth-alert-success">
       <strong>Success!</strong> You signed in!
     </div>
   </div>
 
   <!--Sign-In-Alert-Error-Message-->
   <div id="sign-in-error-container">
-    <div class="alert alert-sign-in-failure alert-dismissible fade" role="alert" id="sign-in-auth-alert-failure">
+    <div class="alert alert-danger fade" role="alert" id="sign-in-auth-alert-failure">
       <strong>Error</strong> Check credentials.
     </div>
   </div>
 
   <!--Change-password-alert-success-message-->
   <div id="change-password-alert-container">
-    <div class="alert alert-change-password-sucess alert-dismissible fade" role="alert" id="change-password-auth-alert-success">
+    <div class="alert alert-success fade" role="alert" id="change-password-auth-alert-success">
       <strong>Success</strong> You changed your password!
     </div>
 
     <!--Change-password-alert-error-message-->
-    <div class="alert alert-change-password-failure alert-dismissible fade" role="alert" id="change-password-auth-alert-failure">
-      <strong>Error</strong> Passwords don't match!
+    <div id="change-password-error-container">
+      <div class="alert alert-danger fade" role="alert" id="change-password-auth-alert-failure">
+        <strong>Error</strong> Passwords don't match!
+      </div>
     </div>
   </div>
 
   <!--Sign-out-alert-success-message-->
+
+  <div class="alert alert-success fade" role="alert" id="change-password-auth-alert-success">
+    <strong>Success</strong> You changed your password!
+  </div>
+
   <div id="sign-out-alert-container">
-    <div id="sign-out" class="alert alert-success alert-dismissible fade" role="alert" id="sign-out-auth-alert-success">
+    <div id="sign-out-auth-alert-success sign-out" class="alert alert-success alert-dismissible fade" role="alert">
       <strong>Success!</strong> You signed out.
+    </div>
+  </div>
+
+  <!-- Contacts Messages -->
+  <!-- Create Contact Msg-->
+  <div id="create-contact-container">
+    <div class="alert alert-warning fade" role="alert" id="create-contact-message">
+      <strong>Success!</strong> You created a new contacts.
+    </div>
+  </div>
+
+  <!-- Update Contacts Msg-->
+  <div id="update-contact-container">
+    <div class="alert alert-success fade" role="alert" id="update-contact-message">
+      <strong>Success!</strong> You updated a new contacts.
+    </div>
+  </div>
+
+  <!-- Delete Contact Msg-->
+  <div id="delete-contacts-container">
+    <div id="delete-contacts-message" <div class="alert alert-success fade" role="alert">
+      <strong>Success!</strong> You deleted a contact.
     </div>
   </div>
 
@@ -147,20 +176,6 @@
       <div id="update-contact-message user-feedback" class=""></div>
     </div>
   </div>
-  <!-- Contacts Messages -->
-  <!-- Create Contact Msg-->
-  <div id="create-contact-container" class="alert alert-success alert-dismissible fade" role="alert" id="sign-up-auth-alert-success">
-      <strong>Success!</strong> You created a new contacts.
-  </div>
-
-  <!-- Update Contacts Msg-->
-  <div id="update-contact-container" class="alert alert-success alert-dismissible fade" role="alert" id="sign-up-auth-alert-success">
-      <strong>Success!</strong> You updated a new contacts.
-  </div>
-
-  <!-- Delete Contact Msg-->
-  <div id="delete-contacts-container" class="alert alert-success alert-dismissible fade" role="alert" id="sign-up-auth-alert-success">
-      <strong>Success!</strong> You deleted a new contacts.
-  </div>
 </body>
+
 </html>

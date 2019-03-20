@@ -3,17 +3,25 @@
 const showContactsTemplate = require('../templates/contacts-listing.handlebars')
 
 const createContactSuccess = (responseData) => {
-  $('#create-contact-container').addClass('show')
+  $('#create-contact-message').addClass('show')
   setTimeout(() => {
-    $('#create-contact-container').hide()
+    $('#create-contact-message').removeClass('show')
   }, 2000)
   $('form').trigger('reset')
 }
 
 const onUpdateSuccess = (responseData) => {
-  $('#update-contact-container').addClass('show')
+  $('#update-contact-message').addClass('show')
   setTimeout(() => {
-    $('#update-contact-container').hide()
+    $('#update-contact-message').removeClass('show')
+  }, 2000)
+  $('form').trigger('reset')
+}
+
+const onDeleteContact = (responseData) => {
+  $('#delete-contacts-message').addClass('show')
+  setTimeout(() => {
+    $('#delete-contacts-message').removeClass('show')
   }, 2000)
   $('form').trigger('reset')
 }
@@ -29,5 +37,6 @@ const getContactsSuccess = (responseData) => {
 module.exports = {
   createContactSuccess,
   getContactsSuccess,
+  onDeleteContact,
   onUpdateSuccess
 }
