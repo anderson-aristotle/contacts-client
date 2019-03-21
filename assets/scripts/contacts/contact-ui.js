@@ -18,11 +18,24 @@ const onUpdateSuccess = (responseData) => {
   $('form').trigger('reset')
 }
 
+// const onUpdateFailure = (responseData) => {
+//   $('#update-contact-err-msg').addClass('show')
+//   setTimeout(() => {
+//     $('#update-contact-err-msg').removeClass('show')
+//   }, 2000)
+//   $('form').trigger('reset')
+// }
+
 const onDeleteContact = (responseData) => {
   $('#delete-contacts-message').addClass('show')
   setTimeout(() => {
     $('#delete-contacts-message').removeClass('show')
   }, 2000)
+  $('form').trigger('reset')
+}
+
+const onUpdateContactFailure = id => {
+  $(`#update-${id}-user-message`).html('You can ONLY update your contacts')
   $('form').trigger('reset')
 }
 const getContactsSuccess = (responseData) => {
@@ -35,13 +48,13 @@ const getContactsSuccess = (responseData) => {
 }
 
 const onDeleteContactFailure = id => {
-  console.log('onDeleteContactFailure')
   $(`#deleteable-${id}-user-message`).html('this is not deleteable')
 }
 
 module.exports = {
   createContactSuccess,
   getContactsSuccess,
+  onUpdateContactFailure,
   onDeleteContact,
   onUpdateSuccess,
   onDeleteContactFailure

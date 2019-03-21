@@ -14,7 +14,7 @@
 </head>
 
 <body>
-
+        <h1>E-Contacts</h1>
   <!-- Sign-Up-Credentials -->
   <div class="sign-up-container pre-login">
     <form id="sign-up-form">
@@ -38,6 +38,7 @@
   <!-- Change-Password-Credentials -->
   <div class="post-login">
     <div class="dropdown">
+      <h5 id="ugh">You can only update and delete your own contact</h5>
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Authentication
       </button>
@@ -125,12 +126,12 @@
     </div>
   </div> -->
 
-  <!-- Update Contacts Msg-->
-  <!-- <div id="update-contact-container">
-    <div class="alert alert-success fade" role="alert" id="update-contact-message">
-      <strong>Success!</strong> You updated a new contacts.
+  <!-- Update Contacts Err Msg-->
+  <div id="update-contact-container">
+    <div class="alert alert-danger fade" role="alert" id="update-contact-err-msg">
+      <strong>Not</strong> Authorized to update that contact.
     </div>
-  </div> -->
+  </div>
 
   <!-- Delete Contact Msg-->
   <div id="delete-contacts-container">
