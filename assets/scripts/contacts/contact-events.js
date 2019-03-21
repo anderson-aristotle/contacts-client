@@ -30,7 +30,7 @@ const onDeleteContact = (event) => {
   const contactId = $(event.target).closest('div').data('id')
   api.deleteContact(contactId)
     .then(() => onGetContacts(event))
-    .catch(ui.failure)
+    .catch(ui.onDeleteContactFailure(contactId))
 }
 const contactHandlers = () => {
   $('#get-contacts').on('click', onGetContacts)

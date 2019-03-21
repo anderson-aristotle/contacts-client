@@ -119,22 +119,22 @@
 
   <!-- Contacts Messages -->
   <!-- Create Contact Msg-->
-  <div id="create-contact-container">
+  <!-- <div id="create-contact-container">
     <div class="alert alert-warning fade" role="alert" id="create-contact-message">
       <strong>Success!</strong> You created a new contacts.
     </div>
-  </div>
+  </div> -->
 
   <!-- Update Contacts Msg-->
-  <div id="update-contact-container">
+  <!-- <div id="update-contact-container">
     <div class="alert alert-success fade" role="alert" id="update-contact-message">
       <strong>Success!</strong> You updated a new contacts.
     </div>
-  </div>
+  </div> -->
 
   <!-- Delete Contact Msg-->
   <div id="delete-contacts-container">
-    <div id="delete-contacts-message" <div class="alert alert-success fade" role="alert">
+    <div class="alert alert-success fade" role="alert" id="delete-contacts-message">
       <strong>Success!</strong> You deleted a contact.
     </div>
   </div>
@@ -159,7 +159,13 @@
           <button type="submit">Create Contact</button>
         </form>
 
-        <div id="create-contact-message" class="user-feedback"></div>
+        <div id="create-contact-message user-feedback" class="">
+          <div id="create-contact-container">
+            <div class="alert alert-warning fade" role="alert" id="create-contact-message">
+              <strong>Success!</strong> You created a new contacts.
+            </div>
+          </div>
+        </div>
 
         <!-- Update-Contact-Form-->
         <h2>Update One Contact</h2>
@@ -173,8 +179,19 @@
           <button type="submit">Update Contact</button>
         </form>
       </div>
-      <div id="update-contact-message user-feedback" class=""></div>
+      <div id="update-contact-message user-feedback" class="">
+        <div id="update-contact-container">
+          <div class="alert alert-success fade" role="alert" id="update-contact-message">
+            <strong>Success!</strong> You updated a new contacts.
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- end crud containers -->
     </div>
+    <!-- end post login container -->
   </div>
 </body>
 

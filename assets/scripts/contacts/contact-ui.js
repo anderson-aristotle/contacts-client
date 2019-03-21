@@ -34,9 +34,15 @@ const getContactsSuccess = (responseData) => {
   }, 2000)
 }
 
+const onDeleteContactFailure = id => {
+  console.log('onDeleteContactFailure')
+  $(`#deleteable-${id}-user-message`).html('this is not deleteable')
+}
+
 module.exports = {
   createContactSuccess,
   getContactsSuccess,
   onDeleteContact,
-  onUpdateSuccess
+  onUpdateSuccess,
+  onDeleteContactFailure
 }
