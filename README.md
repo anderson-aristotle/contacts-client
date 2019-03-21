@@ -1,11 +1,11 @@
 # E-Contacts!
 
-A online contacts resources where user will be able to creat, read, update, and delete a contact resource. 
+A online contacts resources where user will be able to creat, read, update, and delete a contact resource.
 
 ## Getting Started
 
-Go to https://sheltered-plateau-98685.herokuapp.com/ to deploy the backend/api of E-Contacts.
-Go to https://anderson-aristotle.github.io/contacts-client/ to interact with E-Contacts.
+Go to https://github.com/anderson-aristotle/contacts_api to explore the api code.
+Go to https://github.com/anderson-aristotle/contacts_client to explore client code.
 
 ## Technologies used
 
@@ -21,7 +21,7 @@ Go to https://anderson-aristotle.github.io/contacts-client/ to interact with E-C
 Plan:
 1. Wireframe
 2. Meet with Production Team
-3. File Architure Planning 
+3. File Architure Planning
 4. Start building backend api with Heroku
 5. Test authentication features with curl-scripts
 6. Start building front-end
@@ -43,8 +43,7 @@ Plan:
 10 Built HTML elements to carry out CRUD actions
 
 #### Initial wireframes and user stories
-https://imgur.com/73S13Re
-https://imgur.com/download/kOsSOdW/
++https://imgur.com/kOsSOdW/
 
 1. As a user, I want to sign up.
 2. As a user, I want to sign in.
@@ -63,8 +62,8 @@ https://imgur.com/download/kOsSOdW/
 4. Test, test, and more test!
 
 ## Links
-1. https://github.com/anderson-aristotle/contacts_api	
-2. https://sheltered-plateau-98685.herokuapp.com/	
+1. https://github.com/anderson-aristotle/contacts_api
+2. https://sheltered-plateau-98685.herokuapp.com/
 3. https://github.com/anderson-aristotle/contacts_client
 4. https://anderson-aristotle.github.io/contacts-client/
 
