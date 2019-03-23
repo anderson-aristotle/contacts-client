@@ -2,42 +2,6 @@
 
 const showContactsTemplate = require('../templates/contacts-listing.handlebars')
 
-const createContactSuccess = (responseData) => {
-  $('#create-contact-message').addClass('show')
-  setTimeout(() => {
-    $('#create-contact-message').removeClass('show')
-  }, 2000)
-  $('form').trigger('reset')
-}
-
-const onUpdateSuccess = (responseData) => {
-  $('#update-contact-message').addClass('show')
-  setTimeout(() => {
-    $('#update-contact-message').removeClass('show')
-  }, 2000)
-  $('form').trigger('reset')
-}
-
-// const onUpdateFailure = (responseData) => {
-//   $('#update-contact-err-msg').addClass('show')
-//   setTimeout(() => {
-//     $('#update-contact-err-msg').removeClass('show')
-//   }, 2000)
-//   $('form').trigger('reset')
-// }
-
-const onDeleteContact = (responseData) => {
-  $('#delete-contacts-message').addClass('show')
-  setTimeout(() => {
-    $('#delete-contacts-message').removeClass('show')
-  }, 2000)
-  $('form').trigger('reset')
-}
-
-const onUpdateContactFailure = id => {
-  $(`#update-${id}-user-message`).html('You can ONLY update your contacts')
-  $('form').trigger('reset')
-}
 const getContactsSuccess = (responseData) => {
   const showContactsHtml = showContactsTemplate({ contacts: responseData.contacts })
   $('.content').html(showContactsHtml)
@@ -47,6 +11,32 @@ const getContactsSuccess = (responseData) => {
   }, 2000)
 }
 
+const createContactSuccess = (responseData) => {
+  $('#create-contact-message').addClass('show')
+  setTimeout(() => {
+    $('#create-contact-message').removeClass('show')
+  }, 2000)
+  $('form').trigger('reset')
+}
+
+const onUpdateContact = (event) => {
+  $('update-form').on('submit', () => {
+    $('form').reset()
+  })
+  $('#update-contact-message').addClass('show')
+  setTimeout(() => {
+    $('update-contact-message').removeClass('show')
+  }, 2000)
+}
+
+const onDeleteContact = (responseData) => {
+  $('#delete-contacts-message').addClass('show')
+  setTimeout(() => {
+    $('#delete-contacts-message').removeClass('show')
+  }, 2000)
+  $('form').trigger('reset')
+}
+
 const onDeleteContactFailure = id => {
   $(`#deleteable-${id}-user-message`).html('this is not deleteable')
 }
@@ -54,8 +44,7 @@ const onDeleteContactFailure = id => {
 module.exports = {
   createContactSuccess,
   getContactsSuccess,
-  onUpdateContactFailure,
   onDeleteContact,
-  onUpdateSuccess,
+  onUpdateContact,
   onDeleteContactFailure
 }

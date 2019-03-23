@@ -120,18 +120,6 @@
 
   <!-- Contacts Messages -->
   <!-- Create Contact Msg-->
-  <!-- <div id="create-contact-container">
-    <div class="alert alert-warning fade" role="alert" id="create-contact-message">
-      <strong>Success!</strong> You created a new contacts.
-    </div>
-  </div> -->
-
-  <!-- Update Contacts Err Msg-->
-  <div id="update-contact-container">
-    <div class="alert alert-danger fade" role="alert" id="update-contact-err-msg">
-      <strong>Not</strong> Authorized to update that contact.
-    </div>
-  </div>
 
   <!-- Delete Contact Msg-->
   <div id="delete-contacts-container">
@@ -141,59 +129,59 @@
   </div>
 
   <div class="post-login">
-    <!-- Get Contacts Button -->
-    <div id="crud-container">
-      <h2>Get Contacts Button</h2>
+
+<div class="crud-contacts">
+  <!-- Get Contacts Button -->
+  <div id="crud-container">
+    <h2>Get Contacts Button</h2>
       <button id="get-contacts">Get Contacts</button>
-      <div class="content">
-      </div>
 
       <!-- Create-Contact-Form-->
-
-      <div class="crud-contacts">
-        <form class="contacts" id="contacts-create">
-          <div class="form-group">
-            <input required type="text" name="contact[name]" placeholder="Contact name Here">
-            <input required type="text" name="contact[email]" placeholder="Contact Email Here">
-            <input required type="text" name="contact[industry]" placeholder="Contact Industry Here">
-          </div>
+        <div class="content"></div>
+          <form class="contacts" id="contacts-create">
+            <div class="form-group">
+              <input required type="text" name="contact[name]" placeholder="Contact name Here">
+              <input required type="text" name="contact[email]" placeholder="Contact Email Here">
+              <input required type="text" name="contact[industry]" placeholder="Contact Industry Here">
+            </div>
           <button type="submit">Create Contact</button>
-        </form>
+          </form>
 
-        <div id="create-contact-message user-feedback" class="">
-          <div id="create-contact-container">
-            <div class="alert alert-warning fade" role="alert" id="create-contact-message">
-              <strong>Success!</strong> You created a new contacts.
+          <div id="user-feedback" class="">
+            <div id="create-contact-container">
+              <div class="alert alert-warning fade" role="alert" id="create-contact-message">
+                <strong>Success!</strong> You created a new contacts.
+              </div>
             </div>
           </div>
-        </div>
 
         <!-- Update-Contact-Form-->
-        <h2>Update One Contact</h2>
-        <form class="contacts" id="contacts-update">
-          <div class="form-group">
-            <input required type="number" name="contact[id]" id="contact-id-update" placeholder="Contact ID Here">
-            <input required type="text" name="contact[name]" placeholder="Contact Name Here">
-            <input required type="text" name="contact[email]" placeholder="Contact Email Here">
-            <input required type="text" name="contact[industry]" placeholder="Contact Industry Here">
-          </div>
-          <button type="submit">Update Contact</button>
-        </form>
-      </div>
-      <div id="update-contact-message user-feedback" class="">
-        <div id="update-contact-container">
-          <div class="alert alert-success fade" role="alert" id="update-contact-message">
-            <strong>Success!</strong> You updated a new contacts.
-          </div>
+    <h2>Update Contact</h2>
+<div>
+  <div id="update-contact">
+    <form class="update-contact">
+        <div class="form-group" id="update-form">
+          <input required type="number" name="contact[id]" placeholder="Contact ID">
+          <input required type="text" name="contact[name]" placeholder="Contact Name Here">
+          <input required type="text" name="contact[email]" placeholder="Contact Email">
+          <input required type="text" name="contact[industry]" placeholder="Contact Industry">
         </div>
+          <button type="submit">Update</button>
+      </form>
 
-      </div>
-
-
+        <div id="user-success-feedback" class="">
+          <div id="update-contact-container">
+            <div class="alert alert-warning fade" role="alert" id="update-contact-message">
+              <strong>Success!</strong> You updated a new contacts.
+            </div>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
       <!-- end crud containers -->
     </div>
     <!-- end post login container -->
   </div>
 </body>
-
 </html>

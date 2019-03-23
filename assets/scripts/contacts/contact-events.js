@@ -34,7 +34,7 @@ const onDeleteContact = (event) => {
 }
 const contactHandlers = () => {
   $('#get-contacts').on('click', onGetContacts)
-  $('#contacts-update').on('submit', onUpdateContact)
+  $('#update-contact').on('submit', onUpdateContact)
   $('#contacts-create').on('submit', onCreateContact)
   $('.content').on('click', '.delete-contact', onDeleteContact)
 }
