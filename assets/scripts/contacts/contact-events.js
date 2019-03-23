@@ -12,6 +12,7 @@ const onCreateContact = (event) => {
 
 const onUpdateContact = (event) => {
   event.preventDefault()
+  console.log('onUpdateContact is being called')
   const contact = getFormFields(event.target)
   api.updateContact(contact)
     .then(ui.onUpdateSuccess)

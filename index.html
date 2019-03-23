@@ -158,15 +158,18 @@
         <!-- Update-Contact-Form-->
     <h2>Update Contact</h2>
 <div>
+
+
+
   <div id="update-contact">
-    <form class="update-contact">
+    <form class="update-contact-form">
         <div class="form-group" id="update-form">
-          <input required type="number" name="contact[id]" placeholder="Contact ID">
-          <input required type="text" name="contact[name]" placeholder="Contact Name Here">
-          <input required type="text" name="contact[email]" placeholder="Contact Email">
-          <input required type="text" name="contact[industry]" placeholder="Contact Industry">
+          <input require type="number" name="contact[id]" placeholder="Contact ID">
+          <input type="text" name="contact[name]" placeholder="Contact Name Here">
+          <input type="text" name="contact[email]" placeholder="Contact Email">
+          <input type="text" name="contact[industry]" placeholder="Contact Industry">
         </div>
-          <button type="submit">Update</button>
+        <input type="submit" class="btn btn-lg btn-primary btn-block" value="Update">
       </form>
 
         <div id="user-success-feedback" class="">
@@ -174,7 +177,14 @@
             <div class="alert alert-warning fade" role="alert" id="update-contact-message">
               <strong>Success!</strong> You updated a new contacts.
             </div>
+          </div>
         </div>
+        <div id="user-failure-feedback" class="">
+          <div id="failure-contact-container">
+            <div class="alert alert-warning fade" role="alert" id="failure-contact-message">
+              <strong>You</strong> are not allowed to update this contact.
+            </div>
+          </div>
         </div>
     </div>
   </div>

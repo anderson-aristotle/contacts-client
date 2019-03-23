@@ -19,20 +19,18 @@ const createContactSuccess = (responseData) => {
   $('form').trigger('reset')
 }
 
-const onUpdateContact = (event) => {
-  $('update-form').on('submit', () => {
-    $('form').reset()
-  })
+const onUpdateSuccess = (event) => {
   $('#update-contact-message').addClass('show')
   setTimeout(() => {
-    $('update-contact-message').removeClass('show')
+    $('#update-contact-message').removeClass('show')
   }, 2000)
+  $('form').trigger('reset')
 }
 
-const onDeleteContact = (responseData) => {
-  $('#delete-contacts-message').addClass('show')
+const onUpdateFailure = (event) => {
+  $('#failure-contact-message').addClass('show')
   setTimeout(() => {
-    $('#delete-contacts-message').removeClass('show')
+    $('#failure-contact-message').removeClass('show')
   }, 2000)
   $('form').trigger('reset')
 }
@@ -44,7 +42,7 @@ const onDeleteContactFailure = id => {
 module.exports = {
   createContactSuccess,
   getContactsSuccess,
-  onDeleteContact,
-  onUpdateContact,
+  onUpdateSuccess,
+  onUpdateFailure,
   onDeleteContactFailure
 }
