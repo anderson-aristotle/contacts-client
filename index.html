@@ -127,14 +127,13 @@
       <strong>Success!</strong> You deleted a contact.
     </div>
   </div>
-
   <div class="post-login">
 
 <div class="crud-contacts">
   <!-- Get Contacts Button -->
   <div id="crud-container">
     <h2>Get Contacts Button</h2>
-      <button id="get-contacts">Get Contacts</button>
+    <input id="get-contacts" type="submit" class="btn btn-lg btn-primary btn-block" value="See Contacts">
 
       <!-- Create-Contact-Form-->
         <div class="content"></div>
@@ -144,7 +143,7 @@
               <input required type="text" name="contact[email]" placeholder="Contact Email Here">
               <input required type="text" name="contact[industry]" placeholder="Contact Industry Here">
             </div>
-          <button type="submit">Create Contact</button>
+          <input type="submit" class="btn btn-lg btn-primary btn-block" value="Create">
           </form>
 
           <div id="user-feedback" class="">
@@ -158,8 +157,6 @@
         <!-- Update-Contact-Form-->
     <h2>Update Contact</h2>
 <div>
-
-
 
   <div id="update-contact">
     <form class="update-contact-form">
