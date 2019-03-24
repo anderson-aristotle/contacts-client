@@ -43,7 +43,7 @@ Plan:
 10 Built HTML elements to carry out CRUD actions
 
 #### Initial wireframes and user stories
-+https://imgur.com/kOsSOdW/
++[Imgur](https://i.imgur.com/QKeOmrY.jpg?1)
 
 1. As a user, I want to sign up.
 2. As a user, I want to sign in.
