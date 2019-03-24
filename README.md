@@ -5,20 +5,19 @@ A online contacts resources where user will be able to creat, read, update, and 
 ## Getting Started
 
 Go to https://github.com/anderson-aristotle/contacts_api to explore the api code.
-Go to https://github.com/anderson-aristotle/contacts_client to explore client code.
 
 ## Technologies used
 
-+ HTML
-+ CSS
-+ Javascript + jQuery
 + Bootstrap
-+ Ruby on Rails
++ CSS
 + Handlebars
++ HTML
++ Javascript
++ jQuery
++ Ruby on Rails
 
 ## Planning and Development
 
-Plan:
 1. Wireframe
 2. Meet with Production Team
 3. File Architure Planning
@@ -43,7 +42,7 @@ Plan:
 10 Built HTML elements to carry out CRUD actions
 
 #### Initial wireframes and user stories
-+[Imgur](https://i.imgur.com/QKeOmrY.jpg?1)
+[Wireframe](https://i.imgur.com/QKeOmrY.jpg?1)
 
 1. As a user, I want to sign up.
 2. As a user, I want to sign in.
@@ -61,11 +60,6 @@ Plan:
 3. Ask team members for guidance or to reveiw my code.
 4. Test, test, and more test!
 
-## Links
-1. https://github.com/anderson-aristotle/contacts_api
-2. https://sheltered-plateau-98685.herokuapp.com/
-3. https://github.com/anderson-aristotle/contacts_client
-4. https://anderson-aristotle.github.io/contacts-client/
 
 ## Unsolved Problems (Problem Working on at the time of editing this file)
 
