@@ -15,7 +15,7 @@ const onUpdateContact = (event) => {
   const contact = getFormFields(event.target)
   api.updateContact(contact)
     .then(ui.onUpdateSuccess)
-    .catch(ui.failure)
+    .catch(ui.onUpdateFailure)
 }
 
 const onGetContacts = (event) => {
