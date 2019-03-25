@@ -27,7 +27,7 @@ const onUpdateSuccess = (event) => {
   $('form').trigger('reset')
 }
 
-const onUpdateFailure = () => {
+const onUpdateFailure = (event) => {
   $('#failure-contact-message').addClass('show')
   setTimeout(() => {
     $('#failure-contact-message').removeClass('show')
