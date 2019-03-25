@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>E-Contacts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+
+        <h1>E-Contacts</h1>
+  <!-- Sign-Up-Credentials -->
+  <div class="sign-up-container pre-login">
+    <form id="sign-up-form">
+      <input name="credentials[email]" class="form-control" type="email" placeholder="email">
+      <input name="credentials[password]" class="form-control" type="password" placeholder="password">
+      <input name="credentials[password_confirmation]" class="form-control" type="password" placeholder="password confirmation">
+      <input type="submit" class="btn btn-lg btn-success btn-block" value="Sign-Up">
+    </form>
+  </div>
+
+
+  <!-- Sign-In-Credentials -->
+  <div class="sign-in-container pre-login">
+    <form id="sign-in-form">
+      <input name="credentials[email]" class="form-control" type="email" placeholder="email">
+      <input name="credentials[password]" class="form-control" type="password" placeholder="password">
+      <input type="submit" class="btn btn-lg btn-success btn-block" value="Sign-In">
+    </form>
+  </div>
+
+  <!-- Change-Password-Credentials -->
+  <div class="post-login">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Authentication
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item">
+          <!--Sign-Out-Credentials -->
+          <form id="change-password-form">
+            <input type="password" name="passwords[old]" placeholder="Old Password">
+            <input type="password" name="passwords[new]" placeholder="New Password">
+            <input type="submit" class="btn btn-lg btn-primary btn-block" value="Change-Password">
+          </form>
+        </a>
+        <a class="dropdown-item">
+          <button class="sign-out-container" id="sign-out-button">
+            <input type="submit" class="btn btn-lg btn-primary btn-block" value="Sign-Out">
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="change-password-container post-login">
+    </div>
+  </div>
+
+  <!--Alert-Messages-Containers-->
+  <!--Sign-Up-Alert-Success-Message-->
+  <div id="sign-up-alert-container">
+    <div class="alert alert-success fade" role="alert" id="sign-up-auth-alert-success">
+      <strong>Success!</strong> You signed up.
+    </div>
+  </div>
+
+  <!--Sign-Up-Alert-Error-Message-->
+  <div id="sign-up-error-container">
+    <div class="alert alert-danger fade" role="alert" id="sign-up-auth-alert-failure">
+      <strong>Error</strong> make sure passwords match!
+    </div>
+  </div>
+
+
+  <!-- Sign-In-Alert-Success-Message-->
+  <div id="sign-in-alert-container">
+    <div class="alert alert-success fade" role="alert" id="sign-in-auth-alert-success">
+      <strong>Success!</strong> You signed in!
+    </div>
+  </div>
+
+  <!--Sign-In-Alert-Error-Message-->
+  <div id="sign-in-error-container">
+    <div class="alert alert-danger fade" role="alert" id="sign-in-auth-alert-failure">
+      <strong>Error</strong> Check credentials.
+    </div>
+  </div>
+
+  <!--Change-password-alert-success-message-->
+  <div id="change-password-alert-container">
+    <div class="alert alert-success fade" role="alert" id="change-password-auth-alert-success">
+      <strong>Success</strong> You changed your password!
+    </div>
+
+    <!--Change-password-alert-error-message-->
+    <div id="change-password-error-container">
+      <div class="alert alert-danger fade" role="alert" id="change-password-auth-alert-failure">
+        <strong>Error</strong> Passwords don't match!
+      </div>
+    </div>
+  </div>
+
+  <!--Sign-out-alert-success-message-->
+
+  <div class="alert alert-success fade" role="alert" id="change-password-auth-alert-success">
+    <strong>Success</strong> You changed your password!
+  </div>
+
+  <div id="sign-out-alert-container">
+    <div id="sign-out-auth-alert-success sign-out" class="alert alert-success alert-dismissible fade" role="alert">
+      <strong>Success!</strong> You signed out.
+    </div>
+  </div>
+
+  <!-- Contacts Messages -->
+  <!-- Create Contact Msg-->
+
+  <!-- Delete Contact Msg-->
+  <div id="delete-contacts-container">
+    <div class="alert alert-success fade" role="alert" id="delete-contacts-message">
+      <strong>Success!</strong> You deleted a contact.
+    </div>
+  </div>
+  <div class="post-login">
+
+<div class="crud-contacts">
+  <!-- Get Contacts Button -->
+  <div class="container-fluid">
+
+    <h4>Get Contacts Button</h4>
+    <input id="get-contacts" type="submit" class="btn btn-lg btn-primary btn-block" value="See Contacts">
+  </div>
+      <!-- Create-Contact-Form-->
+        <div class="content"></div>
+          <form class="contacts" id="contacts-create">
+            <div class="form-group">
+              <input required type="text" name="contact[name]" placeholder="Contact name Here">
+              <input required type="text" name="contact[email]" placeholder="Contact Email Here">
+              <input required type="text" name="contact[industry]" placeholder="Contact Industry Here">
+            </div>
+          <input type="submit" class="btn btn-lg btn btn-dark btn-block" value="Create">
+          </form>
+
+          <div id="user-feedback" class="">
+            <div id="create-contact-container">
+              <div class="alert alert-warning fade" role="alert" id="create-contact-message">
+                <strong>Success!</strong> You created a new contacts.
+              </div>
+            </div>
+          </div>
+
+        <!-- Update-Contact-Form-->
+    <h2>Update Contact</h2>
+<div>
+
+  <div id="update-contact">
+    <form class="update-contact-form">
+        <div class="form-group" id="update-form">
+          <input require type="number" name="contact[id]" placeholder="Contact ID">
+          <input type="text" name="contact[name]" placeholder="Contact Name Here">
+          <input type="text" name="contact[email]" placeholder="Contact Email">
+          <input type="text" name="contact[industry]" placeholder="Contact Industry">
+        </div>
+        <input type="submit" class="btn btn-lg btn-secondary btn-block" value="Update">
+      </form>
+
+        <div id="user-success-feedback" class="">
+          <div id="update-contact-container">
+            <div class="alert alert-warning fade" role="alert" id="update-contact-message">
+              <strong>Success!</strong> You updated a new contacts.
+            </div>
+          </div>
+        </div>
+        <div id="user-failure-feedback" class="">
+          <div id="failure-contact-container">
+            <div class="alert alert-warning fade" role="alert" id="failure-contact-message">
+              <strong>You</strong> must select a contacts ID that is yours to update.
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+      <!-- end crud containers -->
+    </div>
+    <!-- end post login container -->
+
+
+</body>
+</html>
